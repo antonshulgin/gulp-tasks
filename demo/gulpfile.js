@@ -68,7 +68,7 @@ gulp.task('concat-js-vendor', tasks.concat({
 }));
 
 // minify project js (uncompressed app.js we saved in tmp/)
-// store the output in dist/ as app,js
+// store the output in dist/ as app.js
 gulp.task('uglify', ['concat-js'], tasks.uglify({
 	src:  config.tmp.root + config.dist.filenames.js,
 	dest: config.dist.root
