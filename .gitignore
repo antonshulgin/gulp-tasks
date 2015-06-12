@@ -1,5 +1,4 @@
 .DS_Store
-demo/
 demo/node_modules
 demo/bower_components
 demo/dist

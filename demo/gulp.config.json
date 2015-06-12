@@ -1,0 +1,50 @@
+{
+	"src": {
+		"root": "./src/",
+		"jade": [
+			"./src/**/*.jade"
+		],
+		"stylus": [
+			"./src/**/*.styl"
+		],
+		"js": [
+			"./src/app.js",
+			"./src/feature/feature.js",
+			"./src/**/*.js"
+		]
+	},
+
+	"dist": {
+		"root": "./dist/",
+		"filenames": {
+			"css": "app.css",
+			"js":  "app.js"
+		}
+	},
+
+	"tmp": {
+		"root": "./tmp/",
+		"js": [
+			"./tmp/app.js"
+		],
+		"css": [
+			"./tmp/app.css",
+			"./tmp/feature/feature.css"
+		]
+	},
+
+	"vendor": {
+		"root": "./bower_components/",
+		"filenames": {
+			"css": "vendor.css",
+			"js":  "vendor.js"
+		},
+		"js": [
+			"./bower_components/angular/angular.min.js",
+			"./bower_components/angular-route/angular-route.min.js"
+		],
+		"css": [
+			"./bower_components/reset-css/reset.css"
+		]
+	}
+}
