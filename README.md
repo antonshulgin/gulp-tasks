@@ -39,7 +39,7 @@ Set output destination:
 return gulp.
 	src(config.src).
 	pipe(uglify()).
-	pipe(gulp.dest(config.dest)); <-- here
+	pipe(gulp.dest(config.dest)); // <-- here
 // ...
 ```
 
@@ -52,7 +52,7 @@ Anything that involves renaming/creating a file. `concat` is a good example:
 // ...
 return gulp.
 	src(config.src).
-	pipe(concat(config.filename)). // the output goes into this file
+	pipe(concat(config.filename)). // <-- the output goes into this file
 	pipe(gulp.dest(config.dest));
 // ...
 ```
@@ -66,7 +66,7 @@ Anything more complex than one line, think `webserver`:
 // ...
 return gulp.
 	src(config.src).
-	pipe(webserver(config.params)); // gulp-webserver parameters
+	pipe(webserver(config.params)); // <-- gulp-webserver parameters
 // ...
 ```
 
