@@ -1,5 +1,6 @@
-Before you start:
+Before you start, install the dependencies:
 
 - `bower install`
 - `npm install`
-- `gulp`
+
+Then run `gulp`.
