@@ -117,7 +117,7 @@ Let's start with writing a `gulpfile.js` (assuming that all necessary packages a
 
 var requireDir = require('require-dir');
 
-var gulp = require('gulp');
+var gulp  = require('gulp');
 var tasks = requireDir('./gulp.tasks/', { camelcase: true });
 ```
 
@@ -151,7 +151,7 @@ gulp.task('concat-css', ['stylus'], tasks.concat({
 		'./tmp/inner.page/inner.page.css'
 	],
 	filename: 'main.css',
-	dest: './tmp/main.css' // this will rewrite our rendered main.css, but we don't really need it anyway
+	dest:     './tmp/main.css' // this will rewrite our rendered main.css, but we don't really need it anyway
 }));
 ```
 
@@ -160,7 +160,7 @@ And compress it:
 ```js
 // gulpfile.js
 gulp.task('minify-css', ['concat-css'], tasks.minifyCss({
-	src: './tmp/main.css', // take the concatenated file
+	src:  './tmp/main.css', // take the concatenated file
 	dest: './dist/'        // save the output into the distribution directory
 }));
 ```
