@@ -22,7 +22,7 @@ Obviously, `gulp.src(config.src)`, as in:
 // gulp.tasks/jade.js
 // ...
 return gulp.
-	src(config.src). // here
+	src(config.src). // <-- here
 	pipe(jade()).
 	pipe(gulp.dest(config.dest));
 // ...
@@ -31,7 +31,17 @@ return gulp.
 
 ### `dest`
 
-`.pipe(gulp.dest(config.dest))`.
+Set output destination:
+
+```js
+// gulp.tasks/uglify.js
+// ...
+return gulp.
+	src(config.src).
+	pipe(uglify()).
+	pipe(gulp.dest(config.dest)); <-- here
+// ...
+```
 
 ### `filename`
 
@@ -111,7 +121,7 @@ var gulp = require('gulp');
 var tasks = requireDir('./gulp.tasks/', { camelcase: true });
 ```
 
-Now that we have included requireDir, gulp itself and all the tasks from `gulp.tasks/`, let's add a task that compiles jade templates:
+Now that we have included [requireDir](/aseemk/requireDir), Gulp itself and `gulp.tasks/`, let's add a task that compiles jade templates:
 
 ```js
 // gulpfile.js
