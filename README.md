@@ -9,7 +9,15 @@ Every task accepts a `config` object with a set of parameters. In order to keep 
 ### `src`
 
 Obviously, `gulp.src(config.src)`, as in:
+
 ```js
+// gulp.tasks/jade.js
+// ...
+return gulp.
+	src(config.src). // here
+	pipe(jade()).
+	pipe(gulp.dest(config.dest));
+// ...
 
 ```
 
