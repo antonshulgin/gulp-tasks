@@ -2,7 +2,10 @@
 
 A bunch of routines in separate files, that bring a slight DRY feeling into Gulp configuration process.
 
-## Naming rules
+- [Naming rules](#naming)
+- [Usage](#usage)
+
+## Naming rules <a id="#naming"></a>
 
 Every task accepts a `config` object with a set of parameters. In order to keep things nice and predictable, there are only 5 of them.
 
@@ -65,9 +68,7 @@ Pass a callback into a task:
 // ...
 ```
 
-## Usage
-
-For more details please see `demo/`.
+## Usage<a id="usage"></a>
 
 Let's say we have a static website built with jade and stylus. What we want to do is:
 
@@ -151,3 +152,5 @@ gulp.task('build', ['jade', 'minify-css']);
 ```
 
 After running `gulp build` we get a `dist/` directory with all the compiled and compressed stuff. That's it.
+
+For more details please see `demo/`.
