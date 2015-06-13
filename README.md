@@ -121,7 +121,7 @@ var gulp = require('gulp');
 var tasks = requireDir('./gulp.tasks/', { camelcase: true });
 ```
 
-Now that we have included [requireDir](https://github.com/aseemk/requireDir), Gulp itself and `gulp.tasks/`, let's add a task that compiles jade templates:
+Now that we have included [require-dir](https://github.com/aseemk/requireDir), Gulp itself and `gulp.tasks/`, let's add a task that compiles jade templates:
 
 ```js
 // gulpfile.js
