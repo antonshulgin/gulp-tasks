@@ -2,10 +2,15 @@
 
 A bunch of routines in separate files, that bring a slight DRY feeling into Gulp configuration process.
 
-- [Naming rules](#naming)
+- [Naming rules](#naming-rules)
+-- [src](#src)
+-- [dest](#dest)
+-- [filename](#filename)
+-- [params](#params)
+-- [callback](#callback)
 - [Usage](#usage)
 
-## Naming rules <a id="#naming"></a>
+## Naming rules
 
 Every task accepts a `config` object with a set of parameters. In order to keep things nice and predictable, there are only 5 of them.
 
@@ -68,7 +73,7 @@ Pass a callback into a task:
 // ...
 ```
 
-## Usage<a id="usage"></a>
+## Usage
 
 Let's say we have a static website built with jade and stylus. What we want to do is:
 
