@@ -3,11 +3,11 @@
 A bunch of routines in separate files, that bring a slight DRY feeling into Gulp configuration process.
 
 - [Naming rules](#naming-rules)
--- [src](#src)
--- [dest](#dest)
--- [filename](#filename)
--- [params](#params)
--- [callback](#callback)
+	- [src](#src)
+	- [dest](#dest)
+	- [filename](#filename)
+	- [params](#params)
+	- [callback](#callback)
 - [Usage](#usage)
 
 ## Naming rules
