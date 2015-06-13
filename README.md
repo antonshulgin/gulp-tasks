@@ -114,6 +114,7 @@ var tasks = requireDir('./gulp.tasks/', { camelcase: true });
 Now that we have included requireDir, gulp itself and all the tasks from `gulp.tasks/`, let's add a task that compiles jade templates:
 
 ```js
+// gulpfile.js
 gulp.task('jade', tasks.jade({
 	src:  './src/**/*.jade', // take everything from the source directory
 	dest: './dist/'          // save the output in the distribution directory
@@ -123,6 +124,7 @@ gulp.task('jade', tasks.jade({
 Time to generate css from our stylus files:
 
 ```js
+// gulpfile.js
 gulp.task('stylus', tasks.stylus({
 	src:  './src/**/*.styl', // take everything from the source directory
 	dest: './tmp/'           // put it into a temporary directory for further concatenation
@@ -132,6 +134,7 @@ gulp.task('stylus', tasks.stylus({
 Concatenate the css:
 
 ```js
+// gulpfile.js
 gulp.task('concat-css', ['stylus'], tasks.concat({
 	src: [
 		'./tmp/main.css',
@@ -145,6 +148,7 @@ gulp.task('concat-css', ['stylus'], tasks.concat({
 And compress it:
 
 ```js
+// gulpfile.js
 gulp.task('minify-css', ['concat-css'], tasks.minifyCss({
 	src: './tmp/main.css', // take the concatenated file
 	dest: './dist/'        // save the output into the distribution directory
@@ -153,6 +157,7 @@ gulp.task('minify-css', ['concat-css'], tasks.minifyCss({
 
 All done, build it:
 ```js
+// gulpfile.js
 gulp.task('build', ['jade', 'minify-css']);
 ```
 
