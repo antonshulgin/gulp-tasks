@@ -4,6 +4,6 @@ var del = require('del');
 
 module.exports = function (config) {
 	return function () {
-		del(config.src, config.callback);
+		del.sync(config.src, { force: true }, config.callback);
 	};
 };
