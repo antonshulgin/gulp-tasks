@@ -7,7 +7,7 @@ module.exports = function (config) {
 	return function () {
 		var task = gulp.
 			src(config.src).
-			pipe(uglify()).
+			pipe(uglify(config.params)).
 			pipe(gulp.dest(config.dest));
 
 		if (config.callback) { task.pipe(config.callback()); }
