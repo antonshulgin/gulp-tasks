@@ -101,4 +101,10 @@ gulp.task('serve', ['build'], tasks.webserver({
 	}
 }));
 
+gulp.task('connect', ['build'], tasks.connect({
+	root: config.dist.root,
+	fallback: config.dist.root + 'app.html',
+	livereload: true
+}));
+
 gulp.task('default', ['serve']);
