@@ -25,7 +25,8 @@ gulp.task('compile-jade', tasks.jade({
 // store the output in tmp/ as a bunch of files with original hierarchy
 gulp.task('compile-stylus', tasks.stylus({
 	src:  config.src.stylus,
-	dest: config.tmp.root
+	dest: config.tmp.root,
+	params: { compress: true }
 }));
 
 // concatenate project css
