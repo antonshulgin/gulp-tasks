@@ -5,8 +5,11 @@ var webserver = require('gulp-webserver');
 
 module.exports = function (config) {
 	return function () {
-		return gulp.
+		var task = gulp.
 			src(config.src).
 			pipe(webserver(config.params));
+
+		if (config.callback) { task.pipe(config.callback()); }
+		return task;
 	};
 };

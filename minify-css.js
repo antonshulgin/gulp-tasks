@@ -5,9 +5,12 @@ var minifyCss = require('gulp-minify-css');
 
 module.exports = function (config) {
 	return function () {
-		return gulp.
+		var task = gulp.
 			src(config.src).
 			pipe(minifyCss()).
 			pipe(gulp.dest(config.dest));
+
+		if (config.callback) { task.pipe(config.callback()); }
+		return task;
 	};
 };
