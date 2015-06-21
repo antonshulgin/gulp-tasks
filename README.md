@@ -172,5 +172,3 @@ gulp.task('build', ['jade', 'minify-css']);
 ```
 
 After running `gulp build` we get a `dist/` directory with all the compiled and compressed stuff. That's it.
-
-For more details please see `demo/`.
