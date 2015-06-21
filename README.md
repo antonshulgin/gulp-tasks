@@ -151,7 +151,7 @@ gulp.task('concat-css', ['stylus'], tasks.concat({
 		'./tmp/inner.page/inner.page.css'
 	],
 	filename: 'main.css',
-	dest:     './tmp/main.css' // this will rewrite our rendered main.css, but we don't really need it anyway
+	dest:     './tmp/' // this will rewrite our rendered main.css, but we don't really need it anyway
 }));
 ```
 
