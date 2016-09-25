@@ -1,9 +1,17 @@
+// jshint node: true
 'use strict';
 
+var gulp = require('gulp');
 var del = require('del');
 
 module.exports = function (config) {
-	return function () {
-		del.sync(config.src, { force: true }, config.callback);
-	};
+	var stuff = [
+		config.dist.root
+	];
+
+	gulp.task('clean', function () {
+		del.sync(stuff, {
+			force: true
+		});
+	});
 };
