@@ -1,10 +1,11 @@
 // jshint node: true
+// jshint esnext: true
 'use strict';
 
-var gulp = require('gulp');
-var stylus = require('gulp-stylus');
-var concat = require('gulp-concat');
-var cleanCss = require('gulp-clean-css');
+const gulp = require('gulp');
+const stylus = require('gulp-stylus');
+const concat = require('gulp-concat');
+const cleanCss = require('gulp-clean-css');
 
 module.exports = function (config) {
 

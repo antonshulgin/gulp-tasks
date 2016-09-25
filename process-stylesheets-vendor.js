@@ -1,8 +1,9 @@
 // jshint node: true
+// jshint esnext: true
 'use strict';
 
-var gulp = require('gulp');
-var concat = require('gulp-concat');
+const gulp = require('gulp');
+const concat = require('gulp-concat');
 
 module.exports = function (config) {
 

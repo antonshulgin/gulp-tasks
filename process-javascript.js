@@ -1,11 +1,12 @@
 // jshint node: true
+// jshint esnext: true
 'use strict';
 
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var sourcemaps = require('gulp-sourcemaps');
-var uglify = require('gulp-uglify');
-var jshint = require('gulp-jshint');
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const sourcemaps = require('gulp-sourcemaps');
+const uglify = require('gulp-uglify');
+const jshint = require('gulp-jshint');
 
 module.exports = function (config) {
 

@@ -1,11 +1,12 @@
 // jshint node: true
+// jshint esnext: true
 'use strict';
 
-var gulp = require('gulp');
-var del = require('del');
+const gulp = require('gulp');
+const del = require('del');
 
 module.exports = function (config) {
-	var stuff = [
+	const stuff = [
 		config.dist.root
 	];
 

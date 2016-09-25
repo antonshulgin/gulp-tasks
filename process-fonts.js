@@ -1,7 +1,8 @@
 // jshint node: true
+// jshint esnext: true
 'use strict';
 
-var gulp = require('gulp');
+const gulp = require('gulp');
 
 module.exports = function (config) {
 
