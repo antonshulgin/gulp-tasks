@@ -6,15 +6,12 @@ const gulp = require('gulp');
 const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
-const jshint = require('gulp-jshint');
 
 module.exports = function (config) {
 
 	gulp.task('process-javascript', function () {
 		return gulp
 			.src(config.src.js)
-			.pipe(jshint())
-			.pipe(jshint.reporter('default'))
 			.pipe(sourcemaps.init())
 			.pipe(concat(config.dist.filenames.js))
 			.pipe(uglify())

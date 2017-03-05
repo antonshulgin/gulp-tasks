@@ -6,17 +6,16 @@ const gulp = require('gulp');
 
 module.exports = function (config) {
 
-	gulp.task('process-resources', function () {
+	gulp.task('process-assets', function () {
 		return gulp
-			.src(config.src.resources)
+			.src(config.src.assets)
 			.pipe(gulp.dest(config.dist.root));
 	});
 
-	gulp.task('watch-resources', function () {
-		gulp.watch(config.src.resources, [
-			'process-resources'
+	gulp.task('watch-assets', function () {
+		gulp.watch(config.src.assets, [
+			'process-assets'
 		]);
 	});
 
 };
-
